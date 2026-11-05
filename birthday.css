@@ -1,0 +1,202 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #dff6ff, #a8dcf5, #eefaff);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.top-text {
+    color: #287caf;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1 {
+    color: #176b9c;
+    font-size: 38px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #287caf;
+}
+
+.subtitle {
+    margin: 15px;
+    color: #527d9b;
+}
+
+.balloons {
+    font-size: 40px;
+    animation: float 3s infinite alternate;
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-20px); }
+}
+
+/* CAKE */
+
+.cake {
+    margin: 90px auto 30px;
+    width: 220px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.cake:hover {
+    transform: scale(1.05);
+}
+
+.candles {
+    display: flex;
+    justify-content: space-evenly;
+    width: 140px;
+    margin: auto;
+}
+
+.flame {
+    width: 13px;
+    height: 22px;
+    background: orange;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+.candle-row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 140px;
+    margin: auto;
+}
+
+.candle {
+    width: 13px;
+    height: 45px;
+    background: repeating-linear-gradient(
+        45deg, #ffffff, #ffffff 5px, #70c9f5 5px, #70c9f5 10px
+    );
+    border-radius: 5px 5px 0 0;
+}
+
+.icing {
+    background: #ffffff;
+    color: #70bce8;
+    font-size: 25px;
+    border-radius: 50% 50% 10px 10px;
+    padding: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.cake-middle {
+    height: 45px;
+    background: #75c6ef;
+    border-radius: 8px;
+    border-bottom: 5px solid #ffffff;
+}
+
+.cake-bottom {
+    height: 50px;
+    background: #398fc5;
+    border-radius: 8px 8px 15px 15px;
+}
+
+#instruction {
+    color: #176b9c;
+    font-weight: bold;
+    margin: 25px;
+}
+
+/* MESSAGE */
+
+#birthdayMessage,
+#giftMessage {
+    display: none;
+    background: white;
+    padding: 25px;
+    margin: 25px auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #287caf33;
+    color: #287caf;
+    line-height: 1.8;
+    animation: appear 1s ease;
+}
+
+#birthdayMessage p,
+#giftMessage p {
+    margin: 15px 0;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    display: none;
+    padding: 15px 25px;
+    background: #287caf;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 15px;
+}
+
+button:hover {
+    background: #15577f;
+}
+
+/* CONFETTI */
+
+.confetti {
+    position: fixed;
+    top: -15px;
+    font-size: 22px;
+    animation: fall 3s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 500px) {
+    h1 {
+        font-size: 28px;
+    }
+}

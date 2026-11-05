@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories 💙</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Our Beautiful Memories 💙</h1>
+
+        <p>Every picture tells our friendship story!</p>
+
+        <button id="startBtn" onclick="startMemories()">
+            ❤️ START OUR MEMORIES ❤️
+        </button>
+
+        <!-- Background Music -->
+
+        <audio id="bgMusic" loop>
+            <source src="media/friendship-song.mp3" type="audio/mpeg">
+        </audio>
+
+        <h2 class="heart-title">A HEART FULL OF MEMORIES ❤️</h2>
+
+        <!-- Heart Photo Collage -->
+
+        <div class="heart-gallery" id="gallery">
+        </div>
+
+        <h2 id="message"></h2>
+
+        <!-- Videos -->
+
+        <section id="videoSection">
+
+            <h1>Our Crazy Moments 🎬</h1>
+
+            <div class="video-card">
+                <video controls playsinline>
+                    <source src="media/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-card">
+                <video controls playsinline>
+                    <source src="media/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-card">
+                <video controls playsinline>
+                    <source src="media/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </section>
+
+        <button id="nextBtn" onclick="nextPage()">
+            NEXT SURPRISE 🎁
+        </button>
+
+        <p class="footer">Made with love by Sanjana 💙</p>
+
+    </div>
+
+    <script src="gallery.js"></script>
+
+</body>
+</html>
+<script src="gallery.js"></script>

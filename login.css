@@ -1,0 +1,168 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #020024,
+        #064789,
+        #00a6fb
+    );
+
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 35px;
+    text-align: center;
+
+    background: rgba(255,255,255,0.12);
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 0 40px rgba(0,180,255,0.4);
+
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.emoji {
+    font-size: 65px;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.top {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #a5e7ff;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 35px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 21px;
+    margin: 15px 0;
+}
+
+h2 span {
+    color: #7de3ff;
+}
+
+.description {
+    color: #d7f3ff;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.question {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.question p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #c7eeff;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid #65cfff;
+
+    background: rgba(0,20,60,0.5);
+    color: white;
+
+    outline: none;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #b2d9ed;
+}
+
+input:focus {
+    box-shadow: 0 0 15px #38bdf8;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #00a6fb,
+        #38bdf8
+    );
+
+    border: none;
+    border-radius: 30px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px #7de3ff;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.footer {
+    margin-top: 25px;
+    color: #a9e8ff;
+    line-height: 1.8;
+}
+
+.footer small {
+    font-size: 11px;
+}

@@ -11,7 +11,7 @@ for (let i = 1; i <= 25; i++) {
 
     const img = document.createElement("img");
 
-    img.src = "media/photo" + i + ".jpeg";
+    img.src = "photo" + i + ".jpeg";
     img.alt = "Memory " + i;
 
     photo.appendChild(img);
